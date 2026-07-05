@@ -33,13 +33,7 @@ const Contact = () => {
      
       const result = await response.json()
       console.log(result);
-      if (response.ok) {
-  router.push('/')
-} else {
-  console.error(result)
-  // show an error to the user
-}
-    }
+      router.push('/')
       
     }
     catch(error){
