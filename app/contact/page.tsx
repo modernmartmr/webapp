@@ -17,7 +17,7 @@ const Contact = () => {
     const { name, value } = e.target 
     setUser({ ...user, [name]: value })
   }
-  const sendData = async function (e: React.FormEvent<HTMLFormElement>) {
+  const sendData = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try{
       const response = await fetch('/api/ledata', {
