@@ -17,11 +17,12 @@ const Contact = () => {
     const { name, value } = e.target 
     setUser({ ...user, [name]: value })
   }
-  const sendData = async function (e: React.MouseEvent<HTMLButtonElement>) {
+  const sendData = async function (e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     try{
       const response = await fetch('/api/ledata', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           username: user.username,
           mobile: user.mobile,
@@ -32,8 +33,12 @@ const Contact = () => {
      
       const result = await response.json()
       console.log(result);
-      if(result) {
-        router.push('/')  
+      if (response.ok) {
+  router.push('/')
+} else {
+  console.error(result)
+  // show an error to the user
+}
     }
       
     }
