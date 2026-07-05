@@ -20,8 +20,7 @@ const About = () => {
                         <span className="text-blue-600 font-bold">
                             Skills : 
                         </span> &nbsp;
-                        Html, JavaScript, Css ,Mysql, MongoDB, Python, NextJs,
-                        Django
+                        MS Excel, Mysql, MongoDB, Power BI, Python, Tableau
                     </div>
                     <br />
                     <div className='m-1'>
@@ -31,20 +30,20 @@ const About = () => {
                         </span> &nbsp;
                         <a
                             className="text-green"
-                            href="https://portfolio-nine-iota-78.vercel.app"
+                            href="https://webapp-beryl-iota-93.vercel.app/"
                             target="_blank"
                         > 
                             
-                            Personal Portfolio
+                          Portfolio
                         </a>
                         , 
                         <a
                             className="text-green"
-                            href="https://manoharsignh.pythonanywhere.com"
+                            href="https://github.com/modernmartmr/data analytics"
                             target="_blank"
                         >
                 
-                            Ecommerce Website
+                            Data Analytics
                         </a>
                     </div>
                 </div>
