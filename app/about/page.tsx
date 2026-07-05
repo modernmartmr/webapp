@@ -39,7 +39,7 @@ const About = () => {
                         ,  
                         <a
                             className="text-green"
-                            href="https://github.com/modernmartmr/data analytics"
+                            href="https://github.com/modernmartmr/data_analytics"
                             target="_blank"
                         >
                 
