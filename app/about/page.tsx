@@ -36,7 +36,7 @@ const About = () => {
                             
                           Portfolio
                         </a>
-                        , 
+                        ,  
                         <a
                             className="text-green"
                             href="https://github.com/modernmartmr/data analytics"
