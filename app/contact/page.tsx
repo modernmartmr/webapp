@@ -114,7 +114,7 @@ const Contact = () => {
             name="desc"
             value={user.desc}
             onChange={setUserData}
-            placeholder="What happened, and when did it start?"
+            placeholder="Describe the issue you're facing with your dashboard, reports, or data..."
             required
           />
         </label>
