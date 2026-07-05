@@ -85,7 +85,7 @@ const Contact = () => {
             name="mobile"
             value={user.mobile}
             onChange={setUserData}
-            placeholder="000-000-0000"
+            placeholder="0000000000"
             required
           />
         </label>
