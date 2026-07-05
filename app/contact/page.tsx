@@ -44,57 +44,90 @@ const Contact = () => {
   }
 
   return (
-    <form
-  className="flex flex-col items-center text-center rounded-lg gap-2"
-  onSubmit={(e) => {
-    e.preventDefault();
-    sendData();
-  }}
->
-  <input
-    className="flex-1 h-10 text-2xl leading-relaxed placeholder:text-blue-400 placeholder:text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-    type="text"
-    name="username"
-    value={user.username}
-    onChange={setUserData}
-    placeholder="Username"
-    required
-  />
-  <input
-    className="flex-1 h-10 text-2xl leading-relaxed placeholder:text-blue-400 placeholder:text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-    type="tel"
-    pattern="[0-9]{10}"
-    name="mobile"
-    value={user.mobile}
-    onChange={setUserData}
-    placeholder="Contact Number"
-    required
-  />
-  <input
-    className="flex-1 h-10 text-2xl leading-relaxed placeholder:text-blue-400 placeholder:text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-    type="email"
-    name="email"
-    value={user.email}
-    onChange={setUserData}
-    placeholder="Email Address"
-    required
-  />
-  <textarea
-    rows={2}
-    className="flex-1 h-16 leading-relaxed text-2xl my-1 text-green-600 placeholder:text-center"
-    name="desc"
-    value={user.desc}
-    onChange={setUserData}
-    placeholder="Describe Issue"
-    required
-  />
-  <button
-    className="flex-1 h-10 mx-auto leading-relaxed text-2xl p-1 text-blue-600 w-1/4 text-center rounded-lg bg-gray-300"
-    type="submit"
-  >
-    Submit
-  </button>
-</form>
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4 py-12">
+      <form
+        onSubmit={sendData}
+        className="flex flex-col gap-5 w-full max-w-md rounded-2xl bg-white p-8 shadow-lg shadow-slate-200/70 border border-slate-100"
+      >
+        <div className="text-center mb-1">
+          <h1 className="text-2xl font-semibold text-slate-800">
+            Get in touch
+          </h1>
+          <p className="text-sm text-slate-500 mt-1">
+            Tell us what's going on and we'll get back to you.
+          </p>
+        </div>
+ 
+        <label className="flex flex-col gap-1.5">
+          <span className="text-sm font-medium text-slate-700">
+            Username
+          </span>
+          <input
+            className="h-11 rounded-lg border border-slate-300 px-3 text-base text-slate-800 placeholder:text-slate-400 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+            type="text"
+            name="username"
+            value={user.username}
+            onChange={setUserData}
+            placeholder="Your name"
+            required
+          />
+        </label>
+ 
+        <label className="flex flex-col gap-1.5">
+          <span className="text-sm font-medium text-slate-700">
+            Contact number
+          </span>
+          <input
+            className="h-11 rounded-lg border border-slate-300 px-3 text-base text-slate-800 placeholder:text-slate-400 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+            type="tel"
+            inputMode="numeric"
+            pattern="[0-9]{7,15}"
+            name="mobile"
+            value={user.mobile}
+            onChange={setUserData}
+            placeholder="000-000-0000"
+            required
+          />
+        </label>
+ 
+        <label className="flex flex-col gap-1.5">
+          <span className="text-sm font-medium text-slate-700">
+            Email address
+          </span>
+          <input
+            className="h-11 rounded-lg border border-slate-300 px-3 text-base text-slate-800 placeholder:text-slate-400 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={setUserData}
+            placeholder="you@example.com"
+            required
+          />
+        </label>
+ 
+        <label className="flex flex-col gap-1.5">
+          <span className="text-sm font-medium text-slate-700">
+            Describe your issue
+          </span>
+          <textarea
+            className="rounded-lg border border-slate-300 px-3 py-2.5 text-base text-slate-800 placeholder:text-slate-400 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 resize-none"
+            rows={4}
+            name="desc"
+            value={user.desc}
+            onChange={setUserData}
+            placeholder="What happened, and when did it start?"
+            required
+          />
+        </label>
+ 
+        <button
+          className="mt-2 h-11 rounded-lg bg-indigo-600 text-white font-medium text-base transition hover:bg-indigo-700 active:bg-indigo-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>  
   )
 }
 
